@@ -157,12 +157,12 @@ textcode[ '<block>' ] = CHR_BLOCK
 textcode[ '<clock>' ] = TEXT_CLOCK
 textcode[ '<slow>' ] = SPEED_1
 textcode[ '<normal>' ] = SPEED_3
-textcode[ '<fast>' ] = SPEED_3
-textcode[ '<fastest>' ] = TEXT_NOHOLD
-textcode[ '<string>' ] = TEXT_CALLSTRING
-textcode[ '<smalldots>' ] = TEXT_CALLSMALLDOTS
-textcode[ '<fixleft>' ] = TEXT_FIXLEFT
-textcode[ '\n' ] = TEXT_NEWLINE
+textcode[ '<fast>' ] = SPEED_5
+textcode[ '<nohold>' ] = TEXT_NOHOLD
+#textcode[ '<string>' ] = TEXT_CALLSTRING
+#textcode[ '<smalldots>' ] = TEXT_CALLSMALLDOTS
+#textcode[ '<fixleft>' ] = TEXT_FIXLEFT
+#textcode[ '\n' ] = TEXT_NEWLINE
 
 def encodeText ( s ):
 	for code, decode in textcode.iteritems():

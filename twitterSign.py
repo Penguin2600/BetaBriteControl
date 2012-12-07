@@ -16,18 +16,21 @@ def main ():
         
         while 1:
                 resultsDict=searchTweets("#Phx2600LedSign")
-                #for result in resultsDict: 
-                #        print "Found:",result["text"],"\n"
-                
-                signText=resultsDict[0]["text"]
+                for result in resultsDict: 
+                        print "Found:",result["text"],"\n"
 
-                signText=signText.split("#")[0]
-                signText=signText.replace("&lt;", "<")
-                signText=signText.replace("&gt;", ">")
+                signText="<nohold><slow><g><block><dr> "
+                for i in range(0,2):
+                        tempText=resultsDict[i]["text"]
+
+                        tempText=tempText.split("#")[0].strip()
+                        tempText=tempText.replace("&lt;", "<")
+                        tempText=tempText.replace("&gt;", ">")
+                        signText+=tempText + " <g><block><dr> "
 
                 print "Most Recent:",signText,"\n"
                 
-                s.sendTextPriority(AlphaSign.encodeText('<slow><r>'+signText),'a')
+                s.sendTextPriority(AlphaSign.encodeText(signText),'a')
                 time.sleep(30)
         return 0
 
