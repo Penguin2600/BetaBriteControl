@@ -15,7 +15,7 @@ def main ():
         s = AlphaSign.Sign( 'com3' )
         
         while 1:
-                resultsDict=searchTweets("#Phx2600LedSign")
+                resultsDict=searchTweets("#BockLedSign")
                 for result in resultsDict: 
                         print "Found:",result["text"],"\n"
 
